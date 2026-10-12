@@ -56,26 +56,37 @@ export default function App() {
   // ================================================================
 
   function getAllTasks(tasks) {
+    return tasks;
     // TODO
   }
 
   function getIncompleteTasks(tasks) {
+    return tasks.filter(task => task.completed === false);
     // TODO
   }
 
   function findTaskByTitle(tasks, title) {
+    return tasks.find(tasks => tasks.title.includes(title));
     // TODO
   }
 
   function countCompletedTasks(tasks) {
+    return tasks.filter(tasks => tasks.completed === true).length;
     // TODO
   }
 
   function addTask(tasks, newTask) {
+   
+    const new_tasks = [...tasks, newTask] ;
+    return new_tasks;
+
     // TODO
   }
 
   function removeTask(tasks, id) {
+
+
+    
     // TODO
   }
 
