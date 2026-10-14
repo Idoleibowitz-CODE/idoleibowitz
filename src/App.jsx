@@ -84,17 +84,39 @@ export default function App() {
   }
 
   function removeTask(tasks, id) {
-
-
-    
+    return tasks.filter(tasks => tasks.id !== id);
     // TODO
   }
 
   function toggleTaskCompleted(tasks, id) {
+    
+    return tasks.map(task => {
+      if (id === task.id)
+      {
+        const new_task = {...task,completed: !task.completed};
+        return new_task;
+
+      }
+      else{
+        return task;
+      }
+    })
+
     // TODO
   }
 
   function updateTaskPriority(tasks, id, newPriority) {
+    return tasks.map(task => {
+      if (id === task.id)
+      {
+        const new_task = {...task,priority: newPriority};
+        return new_task;
+
+      }
+      else{
+        return task;
+      }
+    })
     // TODO
   }
 
